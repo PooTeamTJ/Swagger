@@ -83,7 +83,7 @@ paths:
           '200':
             description: Success
           '400':
-            description: Not a valid user
+            description: Fail
             
   /uploadImage:
       post:
@@ -105,7 +105,7 @@ paths:
           '200':
             description: Success
           '400':
-            description: Not a valid user
+            description: Fail
             
   /user:
       post:
@@ -133,7 +133,7 @@ paths:
           '200':
             description: Success
           '400':
-            description: Not a valid user
+            description: Fail
             
       get:
         security: 
@@ -154,7 +154,7 @@ paths:
           '200':
             description: Success
           '400':
-            description: Not a valid user
+            description: Fail
             
   /user/{email}:
       get:
@@ -181,7 +181,7 @@ paths:
           '200':
             description: Success
           '400':
-            description: Not a valid user
+            description: Fail
             
   /user/updateEmail:
       post:
@@ -209,7 +209,7 @@ paths:
           '200':
             description: Success
           '400':
-            description: Not a valid user
+            description: Fail
             
   /user/updatePassword:
       post:
@@ -231,7 +231,7 @@ paths:
           '200':
             description: Success
           '400':
-            description: ""
+            description: Fail
             
   /events:
     post:
@@ -257,9 +257,9 @@ paths:
             $ref: '#/definitions/Event'
       responses:
         '200':
-          description: User created!
+          description: Success
         '400':
-          description: Passwords do not match | Email is already taken | Password to short            
+          description: Fail          
     get:
       security: 
         - Bearer: []
@@ -277,9 +277,9 @@ paths:
       parameters: []
       responses:
         '200':
-          description: User created!
+          description: Success
         '400':
-          description: Passwords do not match | Email is already taken | Password to short
+          description: Fail
 
 
   /events/{eventId}:
@@ -305,9 +305,9 @@ paths:
           type: "string"
       responses:
         '200':
-          description: User created!
+          description: Success
         '400':
-          description: Passwords do not match | Email is already taken | Password to short
+          description: Fail
           
     delete:
       security: 
@@ -331,9 +331,9 @@ paths:
           type: "string"
       responses:
         '200':
-          description: User created!
+          description: Success
         '400':
-          description: Passwords do not match | Email is already taken | Password to short
+          description: Fail
 
   /events/{eventId}/tag:
     get:
@@ -358,9 +358,9 @@ paths:
           type: "string"
       responses:
         '200':
-          description: User created!
+          description: Success
         '400':
-          description: Passwords do not match | Email is already taken | Password to short
+          description: Fail
           
   /events/{eventId}/untag:
     get:
@@ -385,9 +385,9 @@ paths:
           type: "string"
       responses:
         '200':
-          description: User created!
+          description: Success
         '400':
-          description: Passwords do not match | Email is already taken | Password to short
+          description: Fail
           
 definitions:
   User:
